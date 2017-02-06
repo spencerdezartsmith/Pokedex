@@ -22,7 +22,7 @@ class PokeCell: UICollectionViewCell {
         layer.cornerRadius = 5.0
     }
     
-    func configureCell(pokemon: Pokemon) {
+    func configureCell(_ pokemon: Pokemon) {
         self.pokemon = pokemon
         pokeNameLabel.text = self.pokemon.name.capitalized
         pokeThumbnail.image = UIImage(named: "\(self.pokemon.pokedexId)")

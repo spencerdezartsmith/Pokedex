@@ -25,6 +25,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // The below function loads only how many cells that are going to be displayed at a time
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PokeCell", for: indexPath) as? PokeCell {
             
+            let pokemon = Pokemon(name: "Pokemon", pokedexId: indexPath.row + 1)
+            
+            cell.configureCell(pokemon)
+            
             return cell
             
         } else {
