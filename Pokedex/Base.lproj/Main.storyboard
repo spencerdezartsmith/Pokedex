@@ -48,14 +48,14 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="dzf-6d-Q8z">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PokeCell" id="dzf-6d-Q8z" customClass="PokeCell" customModule="Pokedex" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="seR-kY-rUA">
+                                                <imageView userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="seR-kY-rUA">
                                                     <rect key="frame" x="0.0" y="0.0" width="105" height="80"/>
                                                     <color key="backgroundColor" red="0.99194461107254028" green="0.99615627527236938" blue="0.99600595235824585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -80,6 +80,10 @@
                                             <constraint firstItem="X2J-2f-aAs" firstAttribute="leading" secondItem="dzf-6d-Q8z" secondAttribute="leading" id="S7f-xz-hqE"/>
                                             <constraint firstItem="X2J-2f-aAs" firstAttribute="top" secondItem="seR-kY-rUA" secondAttribute="bottom" id="Wbw-i7-fve"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="pokeNameLabel" destination="X2J-2f-aAs" id="YOQ-9e-ZMn"/>
+                                            <outlet property="pokeThumbnail" destination="seR-kY-rUA" id="gil-I5-qWf"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -102,6 +106,9 @@
                             <constraint firstItem="yOi-KT-9fB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="lLF-OW-dQU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collection" destination="yOi-KT-9fB" id="5lY-Z7-m04"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
