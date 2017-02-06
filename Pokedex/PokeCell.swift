@@ -15,6 +15,13 @@ class PokeCell: UICollectionViewCell {
     
     var pokemon: Pokemon!
     
+    // Add rounded corners to each of the cells
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        layer.cornerRadius = 5.0
+    }
+    
     func configureCell(pokemon: Pokemon) {
         self.pokemon = pokemon
         pokeNameLabel.text = self.pokemon.name.capitalized

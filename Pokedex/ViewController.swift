@@ -37,7 +37,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     // Gives instruction of how to act when one is selected
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        <#code#>
+    
     }
     
     // Sets the number of items in the section
