@@ -39,8 +39,8 @@
                                         <color key="textColor" red="0.99194461107254028" green="0.99615627527236938" blue="0.99600595235824585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAs-mS-3DY">
-                                        <rect key="frame" x="339" y="27" width="28" height="25"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAs-mS-3DY">
+                                        <rect key="frame" x="339" y="28" width="28" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="Jy1-pV-s63"/>
                                             <constraint firstAttribute="width" constant="28" id="Zij-Qh-6eg"/>
@@ -54,7 +54,7 @@
                                 <color key="backgroundColor" red="1" green="0.396078431372549" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="BAs-mS-3DY" secondAttribute="trailing" constant="8" id="1JP-SV-PNj"/>
-                                    <constraint firstAttribute="bottom" secondItem="BAs-mS-3DY" secondAttribute="bottom" constant="8" id="4gi-8O-v9w"/>
+                                    <constraint firstAttribute="bottom" secondItem="BAs-mS-3DY" secondAttribute="bottom" constant="12" id="4gi-8O-v9w"/>
                                     <constraint firstItem="4xI-9G-OXd" firstAttribute="centerX" secondItem="C2Z-05-KI8" secondAttribute="centerX" id="Mo6-Xe-gqt"/>
                                     <constraint firstItem="4xI-9G-OXd" firstAttribute="leading" secondItem="C2Z-05-KI8" secondAttribute="leading" constant="123" id="Odf-4y-jxE"/>
                                     <constraint firstItem="4xI-9G-OXd" firstAttribute="top" secondItem="C2Z-05-KI8" secondAttribute="top" constant="22" id="UHJ-iW-2Zv"/>

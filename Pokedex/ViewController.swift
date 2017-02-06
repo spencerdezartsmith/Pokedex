@@ -15,6 +15,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     var musicPlayer: AVAudioPlayer!
     var pokemon = [Pokemon]()
+    var musicPaused = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,9 +42,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
             print(error.debugDescription)
         }
-
-
-        
     }
     
     func parsePokemonCSV() {
@@ -114,7 +112,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     @IBAction func musicBtnPressed(_ sender: Any) {
         
-        
+        if !musicPaused {
+            
+            musicPlayer.pause()
+            musicPaused = true
+            
+        } else {
+            
+            musicPlayer.play()
+            musicPaused = false
+            
+        }
         
     }
 
