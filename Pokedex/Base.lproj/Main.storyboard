@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -31,10 +32,6 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xI-9G-OXd">
                                         <rect key="frame" x="123" y="22" width="128" height="35"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="128" id="10r-jU-yRw"/>
-                                            <constraint firstAttribute="height" constant="35" id="5OE-d3-jzF"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="29"/>
                                         <color key="textColor" red="0.99194461107254028" green="0.99615627527236938" blue="0.99600595235824585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -55,15 +52,14 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="BAs-mS-3DY" secondAttribute="trailing" constant="8" id="1JP-SV-PNj"/>
                                     <constraint firstAttribute="bottom" secondItem="BAs-mS-3DY" secondAttribute="bottom" constant="12" id="4gi-8O-v9w"/>
-                                    <constraint firstItem="4xI-9G-OXd" firstAttribute="centerX" secondItem="C2Z-05-KI8" secondAttribute="centerX" id="Mo6-Xe-gqt"/>
-                                    <constraint firstItem="4xI-9G-OXd" firstAttribute="leading" secondItem="C2Z-05-KI8" secondAttribute="leading" constant="123" id="Odf-4y-jxE"/>
-                                    <constraint firstItem="4xI-9G-OXd" firstAttribute="top" secondItem="C2Z-05-KI8" secondAttribute="top" constant="22" id="UHJ-iW-2Zv"/>
-                                    <constraint firstAttribute="bottom" secondItem="4xI-9G-OXd" secondAttribute="bottom" constant="8" id="izt-LN-c74"/>
-                                    <constraint firstAttribute="trailing" secondItem="4xI-9G-OXd" secondAttribute="trailing" constant="124" id="rSz-BT-bRQ"/>
+                                    <constraint firstItem="4xI-9G-OXd" firstAttribute="bottom" secondItem="C2Z-05-KI8" secondAttribute="bottomMargin" id="530-kM-gxO"/>
+                                    <constraint firstItem="4xI-9G-OXd" firstAttribute="top" secondItem="C2Z-05-KI8" secondAttribute="top" constant="22" id="eJZ-wl-R49"/>
+                                    <constraint firstItem="4xI-9G-OXd" firstAttribute="centerX" secondItem="C2Z-05-KI8" secondAttribute="centerX" id="pUX-nW-7Ay"/>
+                                    <constraint firstItem="BAs-mS-3DY" firstAttribute="leading" secondItem="4xI-9G-OXd" secondAttribute="trailing" constant="88" id="tM3-1j-Mop"/>
                                     <constraint firstAttribute="height" constant="65" id="tXb-al-aov"/>
                                 </constraints>
                             </view>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="KYw-Yy-e39">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search Pokemon" translatesAutoresizingMaskIntoConstraints="NO" id="KYw-Yy-e39">
                                 <rect key="frame" x="0.0" y="65" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="UbI-H0-0i4"/>
@@ -143,6 +139,7 @@
                     </view>
                     <connections>
                         <outlet property="collection" destination="yOi-KT-9fB" id="5lY-Z7-m04"/>
+                        <outlet property="searchBar" destination="KYw-Yy-e39" id="D4H-gq-h1K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
