@@ -75,7 +75,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     // Sets the number of items in the section
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        return pokemon.count
     }
     
     
