@@ -12,11 +12,40 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBOutlet var collection: UICollectionView!
     
+    var pokemon = [Pokemon]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         collection.delegate = self
         collection.dataSource = self
+        
+        parsePokemonCSV()
+    }
+    
+    func parsePokemonCSV() {
+        
+        let path = Bundle.main.path(forResource: "pokemon", ofType: "csv")!
+        
+        do {
+            
+            let csv = try CSV(contentsOfURL: path)
+            let rows = csv.rows
+            
+            for row in rows {
+                
+                let newPoke = Pokemon(name: row["identifier"]!, pokedexId: Int(row["id"]!)!)
+                
+                pokemon.append(newPoke)
+                
+            }
+            
+        } catch let error as NSError {
+            
+            print(error.debugDescription)
+        }
+        
+        
     }
 
     // Dequeue the cell and sets up new ones
@@ -25,9 +54,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // The below function loads only how many cells that are going to be displayed at a time
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PokeCell", for: indexPath) as? PokeCell {
             
-            let pokemon = Pokemon(name: "Pokemon", pokedexId: indexPath.row + 1)
+            let poke = pokemon[indexPath.row]
             
-            cell.configureCell(pokemon)
+            cell.configureCell(poke)
             
             return cell
             
