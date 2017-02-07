@@ -38,5 +38,15 @@
 	<array>
 		<string>pokemonFont.ttf</string>
 	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>http://pokeapi.co</key>
+			<string></string>
+		</dict>
+	</dict>
 </dict>
 </plist>

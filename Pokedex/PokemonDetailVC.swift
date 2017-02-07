@@ -23,6 +23,7 @@ class PokemonDetailVC: UIViewController {
     @IBOutlet var currentEvoImg: UIImageView!
     @IBOutlet var nextEvoImg: UIImageView!
     @IBOutlet var nextEvoLabel: UILabel!
+    
     // Set up a variable for the sent segue info to be saved into
     var pokemon: Pokemon!
 
@@ -30,6 +31,18 @@ class PokemonDetailVC: UIViewController {
         super.viewDidLoad()
         
         nameLabel.text = pokemon.name.capitalized
+        
+        pokemon.downloadPokemonDetails {
+            
+            // Whatever we write here will only be called after the network call is complete
+            self.updateUI()
+            
+        }
+        
+    }
+    
+    func updateUI() {
+        
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {

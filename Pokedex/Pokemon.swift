@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class Pokemon {
     private var _name: String!
@@ -36,5 +37,12 @@ class Pokemon {
         self._name = name
         self._pokedexId = pokedexId
         self._pokemonURL = "\(URL_BASE)\(URL_POKEMON)\(self.pokedexId)/"
+    }
+    
+    func downloadPokemonDetails(closureCompleted: DownloadComplete) {
+        Alamofire.request(_pokemonURL).responseJSON { response in
+            
+            print(response.result.value)
+        }
     }
 }
