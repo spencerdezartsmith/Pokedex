@@ -42,7 +42,34 @@ class Pokemon {
     func downloadPokemonDetails(closureCompleted: DownloadComplete) {
         Alamofire.request(_pokemonURL).responseJSON { response in
             
-            print(response.result.value)
+            if let dict = response.result.value as? Dictionary<String, AnyObject> {
+                
+                if let attack = dict["attack"] as? Int {
+                    
+                    self._attack = String(attack)
+                }
+                
+                if let weight = dict["weight"] as? String {
+                    
+                    self._weight = weight
+                }
+                
+                if let height = dict["height"] as? String {
+                    
+                    self._height = height
+                }
+                
+                if let defense = dict["defense"] as? Int {
+                    
+                    self._defense = String(defense)
+                }
+                
+                print(self._attack)
+                print(self._weight)
+                print(self._height)
+                print(self._defense)
+                
+            }
         }
     }
 }
