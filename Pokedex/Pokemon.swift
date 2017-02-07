@@ -22,6 +22,77 @@ class Pokemon {
     private var _pokemonURL: String!
     
     // Set up getters
+    
+    var description: String {
+        
+        if _description == nil {
+            
+            _description = ""
+        }
+        
+        return _description
+    }
+    
+    var type: String {
+        
+        if _type == nil {
+            
+            _type = ""
+        }
+        
+        return _type
+    }
+    
+    var defense: String {
+        
+        if _defense == nil {
+            
+            _defense = ""
+        }
+        
+        return _defense
+    }
+    
+    var height: String {
+        
+        if _height == nil {
+            
+            _height = ""
+        }
+        
+        return _height
+    }
+    
+    var weight: String {
+        
+        if _weight == nil {
+            
+            _weight = ""
+        }
+        
+        return _weight
+    }
+    
+    var attack: String {
+        
+        if _attack == nil {
+            
+            _attack = ""
+        }
+        
+        return _attack
+    }
+    
+    var nextEvoText: String {
+        
+        if _nextEvoText == nil {
+            
+            _nextEvoText = ""
+        }
+        
+        return _nextEvoText
+    }
+    
     var name: String {
         
         return _name
