@@ -169,6 +169,9 @@
                                             <constraint firstAttribute="height" constant="23" id="meh-ng-BEO"/>
                                         </constraints>
                                         <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="9ie-Qt-XCF" eventType="touchUpInside" id="R2S-FU-Fad"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ivysaur" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sef-Xv-sIp">
                                         <rect key="frame" x="126.66666666666669" y="23" width="160" height="34"/>
@@ -176,7 +179,7 @@
                                             <constraint firstAttribute="height" constant="34" id="6Q8-fQ-7dv"/>
                                             <constraint firstAttribute="width" constant="160" id="kFZ-Br-i0C"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="29"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" red="0.97192662954330444" green="0.99236923456192017" blue="0.98818486928939819" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -227,7 +230,6 @@
                                             </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="m3t-Ew-Lyt" firstAttribute="top" secondItem="9ZU-dv-ucm" secondAttribute="bottom" constant="8" id="4Va-0j-sLP"/>
                                             <constraint firstItem="m3t-Ew-Lyt" firstAttribute="leading" secondItem="crv-k8-gDc" secondAttribute="leading" id="CQK-SJ-HIG"/>
                                             <constraint firstAttribute="trailing" secondItem="9ZU-dv-ucm" secondAttribute="trailing" id="OUB-g8-FFD"/>
                                             <constraint firstItem="9ZU-dv-ucm" firstAttribute="leading" secondItem="crv-k8-gDc" secondAttribute="leading" id="dRP-QU-kZ4"/>
@@ -409,14 +411,11 @@
                         <constraints>
                             <constraint firstItem="7pf-rS-JUr" firstAttribute="leading" secondItem="lO2-sx-tkZ" secondAttribute="leading" id="218-jV-lJR"/>
                             <constraint firstItem="Dwd-Nx-4pb" firstAttribute="top" secondItem="iWb-mr-Sj8" secondAttribute="bottom" constant="8" id="7rA-eQ-LTJ"/>
-                            <constraint firstAttribute="trailing" secondItem="7pf-rS-JUr" secondAttribute="trailing" id="F9q-MW-gJO"/>
                             <constraint firstItem="muK-fn-unf" firstAttribute="top" secondItem="7pf-rS-JUr" secondAttribute="bottom" constant="8" id="IMI-jW-gqd"/>
-                            <constraint firstItem="7pf-rS-JUr" firstAttribute="leading" secondItem="lO2-sx-tkZ" secondAttribute="leading" id="N5F-JU-2Cw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="muK-fn-unf" secondAttribute="trailing" id="OIW-4T-fPX"/>
-                            <constraint firstItem="7pf-rS-JUr" firstAttribute="top" secondItem="lO2-sx-tkZ" secondAttribute="top" id="OmE-6W-7bp"/>
                             <constraint firstItem="7pf-rS-JUr" firstAttribute="top" secondItem="lO2-sx-tkZ" secondAttribute="top" id="bfx-gS-tSQ"/>
+                            <constraint firstAttribute="trailing" secondItem="Gpg-bq-ou9" secondAttribute="trailing" id="cD4-Yf-S0F"/>
                             <constraint firstAttribute="trailing" secondItem="7pf-rS-JUr" secondAttribute="trailing" id="fZD-Nc-jDC"/>
-                            <constraint firstAttribute="trailing" secondItem="Gpg-bq-ou9" secondAttribute="trailing" id="lHw-ca-ixe"/>
                             <constraint firstItem="iWb-mr-Sj8" firstAttribute="centerX" secondItem="lO2-sx-tkZ" secondAttribute="centerX" id="no2-cH-jkd"/>
                             <constraint firstItem="iWb-mr-Sj8" firstAttribute="top" secondItem="Gpg-bq-ou9" secondAttribute="bottom" constant="22" id="vUX-y5-tid"/>
                             <constraint firstItem="muK-fn-unf" firstAttribute="leading" secondItem="lO2-sx-tkZ" secondAttribute="leadingMargin" id="xFr-tU-GyL"/>
@@ -424,7 +423,18 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="attackLabel" destination="TYF-m3-5Lb" id="NEp-I6-vl2"/>
+                        <outlet property="currentEvoImg" destination="JHF-1z-R56" id="hUe-lN-idl"/>
+                        <outlet property="defenseLabel" destination="5Kn-P3-gkB" id="EsA-nJ-PZX"/>
+                        <outlet property="descriptionLabel" destination="CLQ-gd-gob" id="zrb-xS-xz6"/>
+                        <outlet property="heightLabel" destination="A8W-d3-Ful" id="QzV-Tg-9kA"/>
+                        <outlet property="mainImage" destination="4MI-C4-YAl" id="hHa-IR-he4"/>
                         <outlet property="nameLabel" destination="Sef-Xv-sIp" id="BAG-hy-E1V"/>
+                        <outlet property="nextEvoImg" destination="sAF-WI-ciI" id="LkW-5x-gES"/>
+                        <outlet property="nextEvoLabel" destination="bOg-27-Zsv" id="37d-6E-fCF"/>
+                        <outlet property="pokedexLabel" destination="60w-b9-O6b" id="Qjv-Vj-Rus"/>
+                        <outlet property="typeLabel" destination="KFT-TN-5TV" id="8cY-47-Zem"/>
+                        <outlet property="weightLabel" destination="pTw-ch-qu7" id="5cY-3V-lYs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Krb-95-Vu1" userLabel="First Responder" sceneMemberID="firstResponder"/>
