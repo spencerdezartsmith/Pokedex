@@ -136,27 +136,23 @@ class Pokemon {
                 }
                 
                 if let types = dict["types"] as? [Dictionary<String, String>], types.count > 0 {
-
-                    var typeString = ""
-                
-                    let lastObj = types.last!
                     
-                    for type in types {
+                    if let name = types[0]["name"] {
                         
-                        if let name = type["name"] {
+                        self._type = name.capitalized
+                    }
+                    
+                    if types.count > 1 {
+                        
+                        for x in 1..<types.count {
                             
-                            if type == lastObj {
+                            if let name = types[x]["name"] {
                                 
-                                typeString += name.capitalized
-                                
-                            } else {
-                                
-                                typeString += "\(name.capitalized)/"
+                                self._type! += "/\(name.capitalized)"
                             }
                         }
                     }
                     
-                    self._type = typeString
                 }
             }
             
