@@ -135,11 +135,29 @@ class Pokemon {
                     self._defense = String(defense)
                 }
                 
-                print(self._attack)
-                print(self._weight)
-                print(self._height)
-                print(self._defense)
+                if let types = dict["types"] as? [Dictionary<String, String>], types.count > 0 {
+
+                    var typeString = ""
                 
+                    let lastObj = types.last!
+                    
+                    for type in types {
+                        
+                        if let name = type["name"] {
+                            
+                            if type == lastObj {
+                                
+                                typeString += name.capitalized
+                                
+                            } else {
+                                
+                                typeString += "\(name.capitalized)/"
+                            }
+                        }
+                    }
+                    
+                    self._type = typeString
+                }
             }
             
             closureCompleted()

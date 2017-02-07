@@ -50,6 +50,7 @@ class PokemonDetailVC: UIViewController {
         heightLabel.text = pokemon.height
         weightLabel.text = pokemon.weight
         attackLabel.text = pokemon.attack
+        typeLabel.text = pokemon.type
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {
