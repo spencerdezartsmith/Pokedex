@@ -10,14 +10,15 @@ import UIKit
 
 class PokemonDetailVC: UIViewController {
     
+    @IBOutlet var nameLabel: UILabel!
+
     // Set up a variable for the sent segue info to be saved into
     var pokemon: Pokemon!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(pokemon.name)
+        nameLabel.text = pokemon.name.capitalized
 
-        // Do any additional setup after loading the view.
     }
 }
