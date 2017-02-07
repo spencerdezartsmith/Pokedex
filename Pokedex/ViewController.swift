@@ -106,6 +106,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     // Gives instruction of how to act when one is selected
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     
+        var poke: Pokemon!
+        
+        if inSearchMode {
+            
+            poke = filteredPokemon[indexPath.row]
+            
+        } else {
+            
+            poke = pokemon[indexPath.row]
+        }
+        
+        // This function correlates with the prepare segue function down below
+        performSegue(withIdentifier: "PokemonDetailVC", sender: poke)
     }
     
     // Sets the number of items in the section
@@ -166,6 +179,20 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             filteredPokemon = pokemon.filter({ $0.name.range(of: lower) != nil })
             collection.reloadData()
             
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PokemonDetailVC" {
+            
+            if let detailsVC = segue.destination as? PokemonDetailVC {
+                
+                if let poke = sender as? Pokemon {
+                    
+                    detailsVC.pokemon = poke
+                    
+                }
+            }
         }
     }
 }
