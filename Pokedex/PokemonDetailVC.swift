@@ -10,6 +10,7 @@ import UIKit
 
 class PokemonDetailVC: UIViewController {
     
+    
     @IBOutlet var nameLabel: UILabel!
 
     // Set up a variable for the sent segue info to be saved into
@@ -19,6 +20,5 @@ class PokemonDetailVC: UIViewController {
         super.viewDidLoad()
         
         nameLabel.text = pokemon.name.capitalized
-
     }
 }
