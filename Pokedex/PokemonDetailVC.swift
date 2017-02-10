@@ -41,6 +41,7 @@ class PokemonDetailVC: UIViewController {
         pokemon.downloadPokemonDetails {
             // Whatever we write here will only be called after the network call is complete
             self.updateUI()
+            
         }
     }
     
@@ -51,6 +52,8 @@ class PokemonDetailVC: UIViewController {
         weightLabel.text = pokemon.weight
         attackLabel.text = pokemon.attack
         typeLabel.text = pokemon.type
+        descriptionLabel.text = pokemon.description
+        
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {

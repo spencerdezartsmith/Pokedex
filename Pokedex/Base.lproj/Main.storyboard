@@ -210,7 +210,7 @@
                                                 </segments>
                                                 <color key="tintColor" red="1" green="0.39561378955841064" blue="0.35525044798851013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </segmentedControl>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m3t-Ew-Lyt">
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="m3t-Ew-Lyt">
                                                 <rect key="frame" x="0.0" y="35" width="343" height="120"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="4MI-C4-YAl">
@@ -220,8 +220,8 @@
                                                             <constraint firstAttribute="width" constant="120" id="b1F-PM-yFb"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The bulb on its back grows as it absorbs nutrients. The bulb gives off a pleasant aroma when it blooms." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CLQ-gd-gob">
-                                                        <rect key="frame" x="120" y="0.0" width="223" height="120"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CLQ-gd-gob">
+                                                        <rect key="frame" x="122" y="0.0" width="221" height="120"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -426,7 +426,7 @@
                         <outlet property="attackLabel" destination="TYF-m3-5Lb" id="NEp-I6-vl2"/>
                         <outlet property="currentEvoImg" destination="JHF-1z-R56" id="hUe-lN-idl"/>
                         <outlet property="defenseLabel" destination="5Kn-P3-gkB" id="EsA-nJ-PZX"/>
-                        <outlet property="descriptionLabel" destination="CLQ-gd-gob" id="zrb-xS-xz6"/>
+                        <outlet property="descriptionLabel" destination="CLQ-gd-gob" id="giR-3Z-RQ0"/>
                         <outlet property="heightLabel" destination="A8W-d3-Ful" id="QzV-Tg-9kA"/>
                         <outlet property="mainImage" destination="4MI-C4-YAl" id="hHa-IR-he4"/>
                         <outlet property="nameLabel" destination="Sef-Xv-sIp" id="BAG-hy-E1V"/>
