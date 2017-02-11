@@ -53,7 +53,8 @@ class PokemonDetailVC: UIViewController {
         attackLabel.text = pokemon.attack
         typeLabel.text = pokemon.type
         descriptionLabel.text = pokemon.description
-        
+        nextEvoLabel.text = "Next Evolution: \(pokemon.nextEvoName) LVL \(pokemon.nextEvoLevel)"
+        nextEvoImg.image = UIImage(named: pokemon.nextEvoPokedexID)
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {

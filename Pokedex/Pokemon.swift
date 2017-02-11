@@ -19,6 +19,9 @@ class Pokemon {
     private var _weight: String!
     private var _attack: String!
     private var _nextEvoText: String!
+    private var _nextEvoName: String!
+    private var _nextEvoLevel: String!
+    private var _nextEvoPokedexID: String!
     private var _pokemonURL: String!
     
     // Set up getters
@@ -63,6 +66,16 @@ class Pokemon {
         return _height
     }
     
+    var nextEvoPokedexID: String {
+        
+        if _nextEvoPokedexID == nil {
+            
+            _nextEvoPokedexID = ""
+        }
+        
+        return _nextEvoPokedexID
+    }
+    
     var weight: String {
         
         if _weight == nil {
@@ -91,6 +104,25 @@ class Pokemon {
         }
         
         return _nextEvoText
+    }
+    
+    var nextEvoName: String {
+        
+        if _nextEvoName == nil {
+            
+            _nextEvoName = ""
+        }
+        
+        return _nextEvoName
+    }
+    
+    var nextEvoLevel: String {
+        
+        if _nextEvoLevel == nil {
+            
+            _nextEvoLevel = ""
+        }
+        return _nextEvoLevel
     }
     
     var name: String {
@@ -175,6 +207,27 @@ class Pokemon {
                             closureCompleted()
                         })
                     }
+                }
+                
+                if let evoArr = dict["evolutions"] as? [Dictionary<String, AnyObject>], evoArr.count > 0 {
+                    
+                    if let level = evoArr[0]["level"] as? Int {
+                        
+                        self._nextEvoLevel = String(level)
+                    }
+                    
+                    if let newName = evoArr[0]["to"] as? String {
+                        
+                        self._nextEvoName = newName
+                    }
+                    
+                    if let uri = evoArr[0]["resource_uri"] as? String {
+                        
+                        let alteredString = uri.replacingOccurrences(of: "/api/v1/pokemon/", with: "")
+                        
+                        self._nextEvoPokedexID = alteredString.replacingOccurrences(of: "/", with: "")
+                    }
+
                 }
             }
             
