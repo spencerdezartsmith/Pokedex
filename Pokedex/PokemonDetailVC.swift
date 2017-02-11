@@ -60,6 +60,7 @@ class PokemonDetailVC: UIViewController {
             nextEvoImg.isHidden = true
             
         } else {
+            nextEvoImg.isHidden = false
             nextEvoLabel.text = "Next Evolution: \(pokemon.nextEvoName) LVL \(pokemon.nextEvoLevel)"
             nextEvoImg.image = UIImage(named: pokemon.nextEvoPokedexID)
             
